@@ -324,6 +324,7 @@ function App() {
           </div>
           <div className="footer-bottom">
             <p>&copy; {new Date().getFullYear()} WinRadial. All rights reserved.</p>
+            <p>Designed and Developed by DuoDevs</p>
             <p>Made for Windows</p>
           </div>
         </div>
