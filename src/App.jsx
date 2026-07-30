@@ -129,8 +129,8 @@ function App() {
               </p>
               
               <div className="cta-wrapper">
-                <a href="/WinRadial-Setup-1.0.0.exe" download="WinRadial-Setup-1.0.0.exe" className="btn-black" style={{display: 'inline-flex', alignItems: 'center', gap: '8px'}}>
-                  <FiZap size={20} color="#e31f26" /> Download Setup
+                <a href="/WinRadial.exe" download="WinRadial.exe" className="btn-black" style={{display: 'inline-flex', alignItems: 'center', gap: '8px'}}>
+                  <FiZap size={20} color="#e31f26" /> Download WinRadial.exe
                 </a>
                 <a href="#how-it-works" className="btn-outline" style={{marginLeft: '15px'}} onClick={(e) => scrollToSection(e, 'how-it-works')}>See how it works</a>
                 <svg className="doodle-arrow" viewBox="0 0 100 50" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -278,8 +278,8 @@ function App() {
               <p style={{fontSize: '1.25rem', opacity: 0.9, maxWidth: '600px', margin: '0 auto', lineHeight: '1.6'}}>
                 Stop searching through cluttered taskbars and start menus. Get friction-less access to your tools today.
               </p>
-              <a href="/WinRadial-Setup-1.0.0.exe" download="WinRadial-Setup-1.0.0.exe" className="download-btn">
-                <FiZap size={22} color="#e31f26"/> Download Setup
+              <a href="/WinRadial.exe" download="WinRadial.exe" className="download-btn">
+                <FiZap size={22} color="#e31f26"/> Download WinRadial.exe
               </a>
               <p style={{marginTop: '2rem', fontSize: '0.95rem', opacity: 0.7}}>Version 1.0.0 • Requires Windows 10/11 (64-bit)</p>
             </div>
