@@ -195,16 +195,16 @@ function App() {
 
         <section id="how-it-works" className="showcase" ref={sections['how-it-works']}>
           <div className="container">
-            <h2 className="section-title">Configuration Engine</h2>
+            <h2 className="section-title">Visual Settings Editor</h2>
             <p className="section-subtitle">
-              All behavior and styling in WinRadial is driven by a central, incredibly fast JSON configuration engine. No bloated UI, just pure text-based customization for developers.
+              All behavior and styling in WinRadial is driven by a powerful visual settings editor. Customize your wheel exactly how you want it with live previews and intuitive controls.
             </p>
             
             <div className="showcase-grid">
               <div className="showcase-text">
                 <h3>Fully customizable. <br/>Down to the pixel.</h3>
                 <p>
-                  Our ConfigService handles loading, validating, and hot-reloading. You break your config? We fallback to a hardcoded default. The app never crashes.
+                  Our built-in settings window lets you tweak colors, sizes, and layout in real-time. No more messing with text files—see your changes instantly as you build your perfect workspace.
                 </p>
                 <ul className="showcase-features-list">
                   <li>
@@ -264,8 +264,8 @@ function App() {
               </div>
               <div className="feature-card">
                 <div className="feature-icon"><FiFolder /></div>
-                <h3>The App Drawer</h3>
-                <p>Don't want to write JSON? Our built-in AppDrawerWindow scans the Start Menu and extracts high-quality icons, allowing you to easily pick installed software to add to your config.</p>
+                <h3>Visual Wheel Layout</h3>
+                <p>Easily manage your apps with our drag-and-drop inspired Wheel Layout tab. Left-click any segment to open submenus or right-click to instantly assign or remove your favorite software.</p>
               </div>
             </div>
           </div>
