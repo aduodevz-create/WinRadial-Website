@@ -3,6 +3,8 @@ import {
   FiZap, FiFolder, FiMoon, FiTrash2, FiCamera, FiCoffee,
   FiTerminal, FiLayers, FiSettings 
 } from 'react-icons/fi';
+import { VscHome, VscArchive, VscAccount, VscSettingsGear } from 'react-icons/vsc';
+import Dock from './Dock';
 import './App.css';
 
 function App() {
@@ -69,6 +71,12 @@ function App() {
     sections[sectionId].current?.scrollIntoView({ behavior: 'smooth' });
   };
 
+  const dockItems = [
+    { icon: <VscHome size={18} />, label: 'Home', onClick: (e) => scrollToSection(e, 'hero') },
+    { icon: <FiLayers size={18} />, label: 'Features', onClick: (e) => scrollToSection(e, 'features') },
+    { icon: <FiZap size={18} />, label: 'Download', onClick: (e) => scrollToSection(e, 'download') },
+  ];
+
   return (
     <div className="app-container">
       {/* Ambient Animated Background */}
@@ -83,29 +91,12 @@ function App() {
           <div className="logo" onClick={(e) => scrollToSection(e, 'hero')} style={{cursor: 'pointer'}}>
             Win<span className="logo-accent">Radial</span>.exe
           </div>
-          <nav className="nav-links">
-            <a 
-              href="#how-it-works" 
-              className={activeSection === 'how-it-works' ? 'active' : ''}
-              onClick={(e) => scrollToSection(e, 'how-it-works')}
-            >
-              How it works
-            </a>
-            <a 
-              href="#features" 
-              className={activeSection === 'features' ? 'active' : ''}
-              onClick={(e) => scrollToSection(e, 'features')}
-            >
-              Features
-            </a>
-            <a 
-              href="#download" 
-              className={activeSection === 'download' ? 'active' : ''}
-              onClick={(e) => scrollToSection(e, 'download')}
-            >
-              Download
-            </a>
-          </nav>
+          <Dock 
+            items={dockItems}
+            panelHeight={50}
+            baseItemSize={42}
+            magnification={55}
+          />
         </div>
       </header>
 
@@ -298,28 +289,14 @@ function App() {
                 Designing tools that transform how power users interact with Windows.
               </p>
             </div>
-            <div className="footer-col">
-              <h4>Product</h4>
-              <ul>
-                <li><a href="#download" onClick={(e) => scrollToSection(e, 'download')}>Download</a></li>
-                <li><a href="#">Documentation</a></li>
-                <li><a href="#">Changelog</a></li>
-              </ul>
-            </div>
-            <div className="footer-col">
-              <h4>Resources</h4>
-              <ul>
-                <li><a href="#">GitHub</a></li>
-                <li><a href="#">Community</a></li>
-                <li><a href="#">Support</a></li>
-              </ul>
-            </div>
-            <div className="footer-col">
-              <h4>Legal</h4>
-              <ul>
-                <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#">Terms of Service</a></li>
-              </ul>
+            <div className="footer-col" style={{maxWidth: '400px'}}>
+              <h4>Quick Start Guide</h4>
+              <ol style={{color: 'var(--text-muted)', lineHeight: '1.8', paddingLeft: '1.2rem', fontFamily: 'Inter, sans-serif'}}>
+                <li><a href="/WinRadial.exe" download="WinRadial.exe" style={{color: 'var(--accent-red)', textDecoration: 'none', fontWeight: '500'}}>Download WinRadial.exe</a></li>
+                <li>Run the executable (no installation required)</li>
+                <li>Press <kbd style={{background: 'rgba(0,0,0,0.05)', padding: '0.2rem 0.5rem', borderRadius: '4px', border: '1px solid var(--border-color, #e0e0e0)', color: 'var(--text-main)', fontSize: '0.85em', fontFamily: 'monospace'}}>Ctrl + Alt + Space</kbd> to launch the radial menu</li>
+                <li>Right-click any segment to customize</li>
+              </ol>
             </div>
           </div>
           <div className="footer-bottom">
